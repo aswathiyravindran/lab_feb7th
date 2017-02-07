@@ -1,8 +1,11 @@
 package com.example.shapes;
 
 
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,7 +16,7 @@ import android.widget.EditText;
 
 public class MainActivity extends ActionBarActivity {
 	
-	ShapeView shapeview;
+	
 	EditText ed;
 	Button r,c,s,t;
 	String sh;
@@ -31,37 +34,40 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
             	sh="rectangle";
+            	Intent i=new Intent(MainActivity.this,SecondActivity.class);
+				i.putExtra("username", sh);
+				startActivity(i);
             }
         });
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             	sh="circle";
+            	Intent i=new Intent(MainActivity.this,SecondActivity.class);
+				i.putExtra("username", sh);
+				startActivity(i);
             }
         });
         s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             	sh="square";
+            	Intent i=new Intent(MainActivity.this,SecondActivity.class);
+				i.putExtra("username", sh);
+				startActivity(i);
             }
         });
         t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             	sh="triangle";
+            	Intent i=new Intent(MainActivity.this,SecondActivity.class);
+				i.putExtra("username", sh);
+				startActivity(i);
             }
         });
     }
-public class ShapeView extends View{
 
-	public ShapeView(Context context) {
-		super(context);
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	
-}
    
     
 }
