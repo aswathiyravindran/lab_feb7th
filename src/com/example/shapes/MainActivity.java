@@ -35,8 +35,11 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
             	sh="rectangle";
+            	String data1=ed.getText().toString();
+            
             	Intent i=new Intent(MainActivity.this,SecondActivity.class);
 				i.putExtra("username", sh);
+				i.putExtra("username1", data1);
 				startActivity(i);
             }
         });
