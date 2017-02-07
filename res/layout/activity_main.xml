@@ -9,10 +9,12 @@
     tools:context="com.example.shapes.MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter the dimension" />
-     <EditText
+
+    <EditText
         android:id="@+id/ed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,13 +24,42 @@
         android:layout_marginTop="40dp"
         android:ems="10" />
 
-     <Button
-         android:id="@+id/bt"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_below="@+id/ed"
-         android:layout_centerHorizontal="true"
-         android:layout_marginTop="33dp"
-         android:text="Click to see shapes" />
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ed"
+        android:layout_below="@+id/ed"
+        android:layout_marginTop="38dp"
+        android:text="Rectangle" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/b1"
+        android:layout_alignBottom="@+id/b1"
+        android:layout_alignRight="@+id/ed"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/b1"
+        android:text="Circle" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/b1"
+        android:layout_below="@+id/b1"
+        android:layout_marginTop="29dp"
+        android:text="Square" />
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/b3"
+        android:layout_alignBottom="@+id/b3"
+        android:layout_alignLeft="@+id/b2"
+        android:text="Triangle" />
 
 </RelativeLayout>
