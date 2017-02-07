@@ -44,30 +44,12 @@
         android:layout_alignLeft="@+id/b2"
         android:text="Triangle" />
 
-    <Button
-        android:id="@+id/b3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/b1"
-        android:layout_marginTop="44dp"
-        android:text="Square" />
-
     <EditText
         android:id="@+id/ed2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ed"
         android:layout_centerHorizontal="true"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/l"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/b4"
-        android:layout_below="@+id/ed2"
-        android:layout_marginTop="15dp"
         android:ems="10" />
 
     <Button
@@ -83,12 +65,28 @@
         android:id="@+id/b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/b2"
-        android:layout_alignLeft="@+id/b3"
-        android:layout_marginBottom="14dp"
+        android:layout_alignRight="@+id/b2"
+        android:layout_below="@+id/l"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/b4"
+        android:layout_below="@+id/ed2"
         android:ems="10" >
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/b1"
+        android:layout_marginTop="24dp"
+        android:text="Square" />
 
 </RelativeLayout>

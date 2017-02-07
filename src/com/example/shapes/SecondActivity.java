@@ -55,7 +55,7 @@ public class SecondActivity extends Activity{
 		{
 		paint.setAntiAlias(true);
 		paint.setColor(Color.BLUE);
-		canvas.drawCircle(60, 20, 15, paint);
+		canvas.drawCircle(x, y, l, paint);
 		}
 
 		// draw red rectangle with anti aliasing turned off
@@ -70,6 +70,12 @@ public class SecondActivity extends Activity{
 		paint.setAntiAlias(false);
 		paint.setColor(Color.MAGENTA);
 		canvas.drawRect(x, y, l, b, paint);
+		}
+		if(data.equals("square"))
+		{
+		paint.setAntiAlias(false);
+		paint.setColor(Color.MAGENTA);
+		canvas.drawRect(x,0,l,b, paint);
 		}
 
 	
