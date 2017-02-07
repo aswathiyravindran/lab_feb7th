@@ -25,15 +25,6 @@
         android:ems="10" />
 
     <Button
-        android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ed"
-        android:layout_below="@+id/ed"
-        android:layout_marginTop="38dp"
-        android:text="Rectangle" />
-
-    <Button
         android:id="@+id/b2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,15 +36,6 @@
         android:text="Circle" />
 
     <Button
-        android:id="@+id/b3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/b1"
-        android:layout_below="@+id/b1"
-        android:layout_marginTop="29dp"
-        android:text="Square" />
-
-    <Button
         android:id="@+id/b4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,5 +43,52 @@
         android:layout_alignBottom="@+id/b3"
         android:layout_alignLeft="@+id/b2"
         android:text="Triangle" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/b1"
+        android:layout_marginTop="44dp"
+        android:text="Square" />
+
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed"
+        android:layout_centerHorizontal="true"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/b4"
+        android:layout_below="@+id/ed2"
+        android:layout_marginTop="15dp"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ed2"
+        android:layout_below="@+id/l"
+        android:layout_marginTop="66dp"
+        android:text="Rectangle" />
+
+    <EditText
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/b2"
+        android:layout_alignLeft="@+id/b3"
+        android:layout_marginBottom="14dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

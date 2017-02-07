@@ -17,7 +17,7 @@ import android.widget.EditText;
 public class MainActivity extends ActionBarActivity {
 	
 	
-	EditText ed;
+	EditText ed,ed1,ed2,ed3;
 	Button r,c,s,t;
 	String sh;
 
@@ -27,6 +27,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         
         ed=(EditText) findViewById(R.id.ed);
+        ed1=(EditText) findViewById(R.id.ed2);
+        ed2=(EditText) findViewById(R.id.l);
+        ed3=(EditText) findViewById(R.id.b);
         r=(Button) findViewById(R.id.b1);
         c=(Button) findViewById(R.id.b2);
         s=(Button) findViewById(R.id.b3);
@@ -36,10 +39,17 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
             	sh="rectangle";
             	String data1=ed.getText().toString();
+            	String data2=ed1.getText().toString();
+            	String data3=ed2.getText().toString();
+            	String data4=ed3.getText().toString();
+            	
             
             	Intent i=new Intent(MainActivity.this,SecondActivity.class);
 				i.putExtra("username", sh);
-				i.putExtra("username1", data1);
+				i.putExtra("userdata1", data1);
+				i.putExtra("userdata2", data2);
+				i.putExtra("userdata3", data3);
+				i.putExtra("userdata4", data4);
 				startActivity(i);
             }
         });
@@ -47,8 +57,16 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
             	sh="circle";
+            	String data1=ed.getText().toString();
+            	String data2=ed1.getText().toString();
+            	String data3=ed2.getText().toString();
+            	String data4=ed3.getText().toString();
             	Intent i=new Intent(MainActivity.this,SecondActivity.class);
 				i.putExtra("username", sh);
+				i.putExtra("userdata1", data1);
+				i.putExtra("userdata2", data2);
+				i.putExtra("userdata3", data3);
+				i.putExtra("userdata4", data4);
 				startActivity(i);
             }
         });
@@ -56,8 +74,16 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
             	sh="square";
+            	String data1=ed.getText().toString();
+            	String data2=ed1.getText().toString();
+            	String data3=ed2.getText().toString();
+            	String data4=ed3.getText().toString();
             	Intent i=new Intent(MainActivity.this,SecondActivity.class);
 				i.putExtra("username", sh);
+				i.putExtra("userdata1", data1);
+				i.putExtra("userdata2", data2);
+				i.putExtra("userdata3", data3);
+				i.putExtra("userdata4", data4);
 				startActivity(i);
             }
         });
@@ -65,8 +91,16 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
             	sh="triangle";
+            	String data1=ed.getText().toString();
+            	String data2=ed1.getText().toString();
+            	String data3=ed2.getText().toString();
+            	String data4=ed3.getText().toString();
             	Intent i=new Intent(MainActivity.this,SecondActivity.class);
 				i.putExtra("username", sh);
+				i.putExtra("userdata1", data1);
+				i.putExtra("userdata2", data2);
+				i.putExtra("userdata3", data3);
+				i.putExtra("userdata4", data4);
 				startActivity(i);
             }
         });

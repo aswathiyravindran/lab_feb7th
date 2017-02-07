@@ -10,8 +10,8 @@ import android.view.View;
 
 public class SecondActivity extends Activity{
 	ShapeView shapeview;
-	String data,data1;
-	int side;
+	String data,data1,data2,data3,data4;
+	int x,y,l,b;
 	protected void onCreate(Bundle  savedInstanceState)
 	{
 	super.onCreate(savedInstanceState);
@@ -19,8 +19,14 @@ public class SecondActivity extends Activity{
 	setContentView(shapeview);
 	Intent i=getIntent();
 	data= i.getStringExtra("username");
-	data1=i.getStringExtra("username1");
-	side=Integer.parseInt(data1);
+	data1=i.getStringExtra("userdata1");
+	data2=i.getStringExtra("userdata2");
+	data3=i.getStringExtra("userdata3");
+	data4=i.getStringExtra("userdata4");
+	x=Integer.parseInt(data1);
+	y=Integer.parseInt(data2);
+	l=Integer.parseInt(data3);
+	b=Integer.parseInt(data4);
 	}
 	public class ShapeView extends View
 	{
@@ -57,13 +63,13 @@ public class SecondActivity extends Activity{
 		{
 		paint.setAntiAlias(false);
 		paint.setColor(Color.MAGENTA);
-		canvas.drawRect(100, 5, 200, 30, paint);
+		canvas.drawRect(x, y, l, b, paint);
 		}
 		if(data.equals("square"))
 		{
 		paint.setAntiAlias(false);
 		paint.setColor(Color.MAGENTA);
-		canvas.drawRect(10, 10, side, side, paint);
+		canvas.drawRect(x, y, l, b, paint);
 		}
 
 	
