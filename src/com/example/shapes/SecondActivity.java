@@ -14,51 +14,54 @@ public class SecondActivity extends Activity{
 	protected void onCreate(Bundle  savedInstanceState)
 	{
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.second_activity);
+	shapeview=new ShapeView(this);
+	setContentView(shapeview);
 	Intent i=getIntent();
 	data= i.getStringExtra("username");
 	
 	}
+	public class ShapeView extends View
+	{
+
+		public ShapeView(Context context) {
+			super(context);
+			// TODO Auto-generated constructor stub
+		}
+		
+		
+		protected void onDraw(Canvas canvas)
+		{
+		super.onDraw(canvas);
+		 
+		// custom drawing code here
+		Paint paint = new Paint();
+		paint.setStyle(Paint.Style.FILL);
+
+		// make the entire canvas white
+		paint.setColor(Color.BLACK);
+		canvas.drawPaint(paint);
+
+		
+		// draw green circle with anti aliasing turned on
+		if(data.equals("circle"))
+		{
+		paint.setAntiAlias(true);
+		paint.setColor(Color.BLUE);
+		canvas.drawCircle(60, 20, 15, paint);
+		}
+
+		// draw red rectangle with anti aliasing turned off
+		if(data.equals("rectangle"))
+		{
+		paint.setAntiAlias(false);
+		paint.setColor(Color.MAGENTA);
+		canvas.drawRect(100, 5, 200, 30, paint);
+		}
+
 	
-	private class ShapeView extends View{  
-        public ShapeView(Context context){  
-            super(context);  
-        }  
-  
-        @Override protected void onDraw(Canvas canvas) {  
-            super.onDraw(canvas);  
-  
-            // custom drawing code here  
-            Paint paint = new Paint();  
-            paint.setStyle(Paint.Style.FILL);  
-  
-            // make the entire canvas white  
-            paint.setColor(Color.WHITE);  
-            canvas.drawPaint(paint);  
-              
-            // draw blue circle with anti aliasing turned off  
-            paint.setAntiAlias(false);  
-            paint.setColor(Color.BLUE);  
-            canvas.drawCircle(20, 20, 15, paint);  
-  
-            // draw green circle with anti aliasing turned on  
-            paint.setAntiAlias(true);  
-            paint.setColor(Color.GREEN);  
-            canvas.drawCircle(60, 20, 15, paint);  
-  
-            // draw red rectangle with anti aliasing turned off  
-            paint.setAntiAlias(false);  
-            paint.setColor(Color.RED);  
-            canvas.drawRect(100, 5, 200, 30, paint);  
-                           
-            // draw the rotated text  
-            canvas.rotate(-45);  
-                      
-            paint.setStyle(Paint.Style.FILL);  
-            canvas.drawText("Graphics Rotation", 40, 180, paint);  
-              
-            //undo the rotate  
-            canvas.restore();  
-        }  
-    }  
+		
+	}	
+	}
+	
+	
 }

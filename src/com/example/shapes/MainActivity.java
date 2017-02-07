@@ -25,6 +25,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
         ed=(EditText) findViewById(R.id.ed);
         r=(Button) findViewById(R.id.b1);
         c=(Button) findViewById(R.id.b2);
